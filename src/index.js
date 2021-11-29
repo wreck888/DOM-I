@@ -40,3 +40,65 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//example: update the imgsrc for the logo
+const logo = document.getElementById('logo-img')
+logo.src = "http://localhost:9000/img/logo.png";
+
+const ctaImage = document.querySelector('#cta-img')
+ctaImage.src = "http://localhost:9000/img/cta.png";
+
+const middleImg = document.querySelector('#middle-img');
+middleImg.src = "http://localhost:9000/img/accent.png";
+
+const navLinks = document.querySelectorAll('nav a')
+const navTexts = Object.values(siteContent.nav)
+navLinks.forEach(function(link, i){
+  link.textContent = navTexts[i];
+});
+
+
+
+const ctaText = document.querySelector('h1');
+ctaText.textContent = siteContent['cta']['h1'];
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button']
+
+const mainFeatures = document.querySelector('h4')
+mainFeatures.textContent = siteContent['main-content']['features-h4'];
+const featuresContent = document.querySelector('p')
+featuresContent.textContent = siteContent['main-content']['features-content'];
+
+const mainAbout = document.querySelector('.text-content:nth-of-type(2) h4')
+mainAbout.textContent = siteContent['main-content']['about-h4']
+const aboutContent = document.querySelector('.text-content:nth-of-type(2) p')
+aboutContent.textContent = siteContent['main-content']['about-content']
+
+const mainServices = document.querySelector('.bottom-content .text-content:nth-of-type(1) h4');
+mainServices.textContent = siteContent['main-content']['services-h4'];
+const servicesContent = document.querySelector('.bottom-content .text-content:nth-of-type(1) p');
+servicesContent.textContent = siteContent['main-content']['services-content'];
+
+const mainProduct = document.querySelector('.bottom-content .text-content:nth-of-type(2) h4');
+mainProduct.textContent = siteContent['main-content']['product-h4'];
+const productContent = document.querySelector('.bottom-content .text-content:nth-of-type(2) p');
+productContent.textContent = siteContent['main-content']['product-content'];
+
+const mainVision = document.querySelector('.bottom-content .text-content:nth-of-type(3) h4');
+mainVision.textContent = siteContent['main-content']['vision-h4'];
+const visionContent = document.querySelector('.bottom-content .text-content:nth-of-type(3) p');
+visionContent.textContent = siteContent['main-content']['vision-content'];
+
+const contactHeading = document.querySelector('.contact h4');
+const address = document.querySelector('.contact p:nth-of-type(1)');
+const phone = document.querySelector('.contact p:nth-of-type(2)');
+const email = document.querySelector('.contact p:nth-of-type(3)');
+
+contactHeading.textContent = siteContent['contact']['contact-h4'];
+address.textContent = siteContent['contact']['address']
+phone.textContent = siteContent['contact']['phone']
+email.textContent = siteContent['contact']['email']
+
+const footer = document.querySelector('footer a')
+footer.textContent = siteContent['footer']['copyright']
